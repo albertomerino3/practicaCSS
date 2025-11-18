@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgba(202, 225, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0.63);
 }
 header{
     display: flex;
@@ -14,6 +14,7 @@ header{
     top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
 }
 #logotipo{
     width: 80px;
@@ -57,20 +58,25 @@ h2{
 #albumLUX{
     padding: 10%;
     align-items: center;
+    background-color: whitesmoke;
 }
 #kanyeWest{
     padding: 10%;
+    background-color:darksalmon;
 
 }
 #kanyeWest div{
     display: flex;
+    flex-direction: row;
 }
 #kanyeWest p{
-    width: 20%;
 }
 #Kanye{
     width: 30%;
+    padding-right: 5%;
+    padding-bottom: 5%;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

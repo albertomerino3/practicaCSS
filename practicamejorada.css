@@ -1,0 +1,135 @@
+/* Reset suave */
+* {
+    margin: 0; /* elimina márgenes por defecto */
+    padding: 0; /* elimina espacios internos por defecto */
+    box-sizing: border-box; /* hace que width/height incluyan padding y border */
+}
+
+body {
+    background-color: #f5f5f5; /* fondo gris claro moderno */
+    font-family: 'Inter', system-ui, sans-serif; /* tipografía más actual */
+    color: #222; /* texto casi negro para contraste */
+    line-height: 1.6; /* espaciado de líneas agradable */
+}
+
+/* HEADER */
+header {
+    display: flex; /* organiza logo y menú en una fila */
+    justify-content: space-between; /* separa logo a la izquierda y menú a la derecha */
+    align-items: center; /* centra verticalmente */
+    position: sticky; /* se queda fijo al hacer scroll */
+    top: 0; /* posición fija en la parte superior */
+    width: 100%; /* ocupar todo el ancho */
+    padding: 15px 40px; /* espacio interno lateral */
+    background-color: white; /* fondo blanco limpio */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* sombra suave inferior */
+    z-index: 100; /* asegura que quede encima de otros elementos */
+}
+
+#logotipo {
+    width: 70px; /* tamaño del logo */
+    margin: 0; /* quita márgenes raros antiguos */
+}
+
+header nav ul {
+    display: flex; /* muestra los links en fila */
+    list-style: none; /* elimina puntos de lista */
+    gap: 30px; /* espacio entre enlaces */
+}
+
+header a {
+    color: #d11b1b; /* rojo del texto */
+    text-decoration: none; /* sin subrayado */
+    font-size: 1.1rem; /* tamaño cómodo */
+    font-weight: 600; /* letra un poco más gruesa */
+}
+
+/* HERO PRINCIPAL */
+#fondoprincipal {
+    background: url(img/background/IMG_7440-scaled.jpg) center/cover no-repeat; /* imagen bien centrada y adaptada */
+    padding: 200px 0; /* altura del bloque */
+    position: relative; /* permite añadir la capa oscura después */
+}
+
+#fondoprincipal::after {
+    content: ""; /* crea la capa */
+    position: absolute; /* se coloca encima */
+    inset: 0; /* ocupa toda la sección */
+    background: rgba(0,0,0,0.25); /* oscurece la imagen para que el texto destaque */
+}
+
+/* TITULOS */
+h1, h2, h3, h4 {
+    font-family: 'Inter', system-ui, sans-serif; /* tipografía consistente */
+    font-weight: 700; /* títulos más marcados */
+}
+
+h1 {
+    text-align: center; /* centrado */
+    font-size: 2.2rem; /* título grande */
+    margin: 20px 0; /* separación */
+    color: #fff; /* texto en blanco para hero */
+}
+
+/* SECCIONES EN GENERAL */
+section {
+    padding: 60px 6%; /* espacio generoso alrededor */
+}
+
+section h2 {
+    font-size: 1.8rem; /* tamaño de subtítulo */
+    margin-bottom: 30px; /* espacio inferior */
+    color: #111; /* casi negro */
+}
+
+/* GRIDS MODERNOS */
+.albumesvendidos,
+.albumesrebajas {
+    display: grid; /* organiza los álbumes en rejilla */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* rejilla adaptable a pantallas */
+    gap: 25px; /* espacio entre tarjetas */
+}
+
+.vendido, .barato {
+    background: rgb(185, 10, 10); /* fondo blanco limpio */
+    padding: 10px; /* espacio interno */
+    border-radius: 8px; /* bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07); /* sombra suave */
+    transition: transform .2s ease, box-shadow .2s ease; /* animación al pasar el ratón */
+}
+
+.vendido:hover,
+.barato:hover {
+    transform: translateY(-4px); /* efecto flotante */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* sombra mayor en hover */
+}
+
+/* IMÁGENES */
+.vendido img,
+.barato img {
+    width: 100%; /* ocupar ancho del contenedor */
+    height: 260px; /* altura fija estética */
+    object-fit: cover; /* recorte elegante sin deformar */
+    border-radius: 6px; /* bordes redondeados */
+}
+
+/* TEXTOS GENERALES */
+p {
+    font-size: 1rem; /* tamaño de lectura estándar */
+    margin: 20px 0; /* separación superior e inferior */
+}
+
+/* SECCIÓN NOTICIAS */
+#albumLUX,
+#kanyeWest {
+    padding: 60px 6%; /* espaciado interno */
+    border-radius: 8px; /* esquinas suaves */
+}
+
+#albumLUX {
+    background-color: #fafafa; /* gris muy claro */
+}
+
+#kanyeWest {
+    background-color: #ffd1c2; /* tono salmón suave */
+}
